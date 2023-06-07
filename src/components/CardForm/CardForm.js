@@ -1,3 +1,5 @@
+import ButtonInput from '../ButtonInput/ButtonInput';
+import TextInput from '../TextInput/TextInput';
 import styles from './CardForm.module.scss';
 import { useState } from 'react';
 
@@ -12,8 +14,8 @@ const CardForm = props => {
 
     return (
         <form className={styles.CardForm} onSubmit={handleSubmit}>
-            <input className={styles.input} type="text" value={title} onChange={e => setTitle(e.target.value)} />
-            <button className={styles.button}>Add column</button>
+            <TextInput className={styles.input} type="text" value={title} onChange={e => setTitle(e.target.value)} />
+            <ButtonInput>Add column</ButtonInput>
         </form>
     );
 
