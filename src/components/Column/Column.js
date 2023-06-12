@@ -17,7 +17,7 @@ const cards = useSelector(state => state.cards.filter(card => card.columnId === 
         {cards.map((card) => (
           <Card key={card.id} title={card.title} />
         ))}
-        <CardForm columnId={props.id} action={props.action} />
+        <CardForm columnId={props.id} />
             </ul>
         </article>
     );
