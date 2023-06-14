@@ -3,13 +3,14 @@ import TextInput from '../TextInput/TextInput';
 import styles from './CardForm.module.scss';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { addCard } from '../../redux/store';
 
 const CardForm = ({ columnId }) => {
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [title, setTitle] = useState('');
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({ type: 'ADD_CARD', payload: { title, columnId } });
+        dispatch(addCard({ title, columnId }));
         setTitle('');
     };
 
