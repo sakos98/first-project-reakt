@@ -11,7 +11,7 @@ const SearchForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(updateSearchString(string));
-  };
+    };
 
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>
