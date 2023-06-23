@@ -31,7 +31,12 @@ export const getAllLists = ({lists}) => {
   return lists;
 };
 
+export const getStarCards = (state) => {
+  return state.cards.filter((card) => card.isFavorite === true);
+};
 
+export const toggleCardFavorite = (payload) => 
+  ({ type: 'TOGGLE_CARD_FAVORITE', payload });
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -43,6 +48,8 @@ const reducer = (state, action) => {
       return { ...state, lists: [...state.lists, { ...action.payload, id: shortid() }] };
     case 'UPDATE_SEARCH_STRING':
       return { ...state, searchString: action.payload };
+    case 'TOGGLE_CARD_FAVORITE':
+      return { ...state, cards: state.cards.map((card) => card.id === action.payload ? { ...card, isFavorite: !card.isFavorite } : card), };
       default:
         return state;
   }

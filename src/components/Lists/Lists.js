@@ -16,7 +16,6 @@ const Lists = () => {
           <p>{list.description}</p>
         </Link>
       ))}
-      
     </section>
   );
 }
