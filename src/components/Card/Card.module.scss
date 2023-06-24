@@ -14,7 +14,7 @@
 
     .button{
         position: relative;
-        background-color: gold;
+        background-color: green;
         border-radius: 4em;
         font-size: 16px;
         color: white;
@@ -30,7 +30,7 @@
       
       .button:hover {
         transition-duration: 0.1s;
-        background-color: orange;
+        background-color: lightgreen;
       }
       
       .button:after {
@@ -55,9 +55,13 @@
         top:0;
         opacity: 1;
         transition: 0s;
+
       }
       
       .button:active {
         top: 1px;
       }
+      .button.clicked {
+        background-color: gold;
+      }     
 }
