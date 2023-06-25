@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addList } from '../../redux/store';
+import  {addList}  from '../../redux/listsRedux';
 import ButtonInput from '../ButtonInput/ButtonInput';
 import TextInput from '../TextInput/TextInput';
 
